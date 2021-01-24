@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf40d5cc711e0af47b7354e364869303, type: 3}
   m_Name: Fifth Brick
   m_EditorClassIdentifier: 
-  impacts: 1
+  impacts: 5

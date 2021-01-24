@@ -7,6 +7,7 @@ public class BrickConstructor : MonoBehaviour
     [SerializeField] private IntReference currentLevel = null;
     [SerializeField] private IntReference remainingBricks = null;
     [SerializeField] private IntReference brickPool = null;
+    [SerializeField] private GameEvent generatingLevels = null;
     [SerializeField] private GameObject firstBrick = null;
     [SerializeField] private GameObject secondBrick = null;
     [SerializeField] private GameObject thirdBrick = null;
@@ -51,6 +52,7 @@ public class BrickConstructor : MonoBehaviour
     {
         Level levelToCreate = levels.Items[currentLevel.Value];
         remainingBricks.Value = levelToCreate.bricks.Count;
+        generatingLevels.Raise();
         foreach (var brick in levelToCreate.bricks)
         {
             switch (brick.brickType)
@@ -71,6 +73,16 @@ public class BrickConstructor : MonoBehaviour
                     SearchAndActivate(fifthBricks, brick.position);
                     break;
             }
+        }
+    }
+
+    public void CheckGameProgression()
+    {
+        remainingBricks.Value--;
+        if (remainingBricks.Value <=0)
+        {
+            currentLevel.Value++;
+            Invoke(nameof(GenerateCurrentLevel), 1f);
         }
     }
 

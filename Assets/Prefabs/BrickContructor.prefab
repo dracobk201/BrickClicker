@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7959129498887178992}
   - component: {fileID: 6917227656231090542}
+  - component: {fileID: 1527775755182866646}
   m_Layer: 0
   m_Name: BrickContructor
   m_TagString: Untagged
@@ -181,6 +182,7 @@ MonoBehaviour:
     UseVariable: 1
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 5450d7f29e1b07047b4d0d353e40d450, type: 2}
+  generatingLevels: {fileID: 11400000, guid: e877782b6ff3ba149a80e14013097d82, type: 2}
   firstBrick: {fileID: 8144467851797388898, guid: b778bf4f6b972dd478656d190b08a5ed,
     type: 3}
   secondBrick: {fileID: 4780362779988879678, guid: 570b421df41ebca47acc89a7a5def96c,
@@ -196,6 +198,33 @@ MonoBehaviour:
   thirdBrickHolder: {fileID: 4534982622014131013}
   fourthBrickHolder: {fileID: 5624606879846981577}
   fifthBrickHolder: {fileID: 1331785902507954962}
+--- !u!114 &1527775755182866646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187578133291946670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69de6bc6d03d67459014507ac53a57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: bfd2bde3fbba6e845b39bbbab3065908, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6917227656231090542}
+        m_MethodName: CheckGameProgression
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8357600044647284754
 GameObject:
   m_ObjectHideFlags: 0
