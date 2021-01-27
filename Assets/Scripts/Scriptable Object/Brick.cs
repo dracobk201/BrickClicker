@@ -4,5 +4,5 @@
 public class Brick : ScriptableObject
 {
     public int impacts;
-
+    public string brickType;
 }
